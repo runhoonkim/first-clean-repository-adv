@@ -36,6 +36,9 @@ def main():
     print(f"APP_DEBUG: {is_debug}")
     print(f"PORT: {port}")
 
+    if is_debug:
+        print("Debug mode is enabled.")
+
 
 if __name__ == "__main__":
     main()
