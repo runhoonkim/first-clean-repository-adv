@@ -12,6 +12,7 @@ def main():
     # get optional variables
     is_debug = os.getenv("APP_DEBUG", "false").lower() == "true"
     port = os.getenv("PORT", "3000")
+    host = os.getenv("HOST", "localhost")
 
     # if required varaibles are miissing, fail loudly
     missing_variables = []
@@ -35,6 +36,7 @@ def main():
     print(f"API_KEY loaded: {bool(api_key)}")
     print(f"APP_DEBUG: {is_debug}")
     print(f"PORT: {port}")
+    print(f"HOST: {host}")
 
     if is_debug:
         print("Debug mode is enabled.")
